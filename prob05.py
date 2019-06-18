@@ -41,7 +41,7 @@ list_ = [5, 9, 3, 8, 60, 20, 1]
 for i in range(len(list_)):
     a = 0
     b = 1
-    for j in range(len(list_)-1):
+    for j in range(i+1, len(list_)):
         if list_[a] < list_[b]:
             temp = list_[a]
             list_[a] = list_[b]
