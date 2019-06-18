@@ -37,6 +37,7 @@
 
 list_ = [5, 9, 3, 8, 60, 20, 1]
 
+# 중복 탐색이 되지 않도록 해야함
 for i in range(len(list_)):
     a = 0
     b = 1
@@ -49,12 +50,18 @@ for i in range(len(list_)):
         else:
             print('-')
         print(i+1,'-',j, '회차', '\n', list_)
-
         a += 1
         b += 1
 
-# for i in range(0, len(list_)):
-
+# for index_i, i in enumerate(list_):
+#     for index_j, j in enumerate(list_):
+#         if i < j:
+#             temp = i
+#             i = j
+#             j = temp
+#         else:
+#             print('-')
+#         print(index_i+1, '-', index_j, '회차', '\n', list_)
 
 
 

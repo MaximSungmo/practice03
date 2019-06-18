@@ -5,7 +5,7 @@ verbs = ['Play', 'Love']
 objs = ['Hockey', 'Football']
 # 3형식 문장을 모두 출력해 보세요. 반드시 comprehension을 사용합니다.
 
-# comprehension 사용하지 않은 답
-lists = zip(subs, verbs, objs)
-for i in lists:
-    print(i)
+for s in subs:
+    for v in verbs:
+        for o in objs:
+            print(s, v, o)

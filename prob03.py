@@ -3,16 +3,10 @@
 
 apart = [[101, 102, 103, 104],[201, 202, 203, 204],[301, 302, 303, 304], [401, 402, 403, 404]]
 arrears = [101, 203, 301, 404]
-p1 = 0
-p2 = 0
-print()
-while int(p1) < len(apart):
-    p2 = 0
-    while int(p2) < len(apart[p1]):
-        if apart[p1][p2] == arrears[p2]:
+
+for a in apart:
+    for a_each in a:
+        if a_each in arrears:
             continue
-        else:
-            print('Nespaper delivery: {0}'.format(apart[p1][p2]))
-        p2 = p2 + 1
-    p1 = p1 + 1
+        print('Newspaper delivery:', a_each)
 

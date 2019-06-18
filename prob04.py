@@ -18,11 +18,11 @@ def setquiz() :
         result = lv * rv
         value = '{0} * {1}'.format(lv, rv)
         selection.update({
-            result:value
+            result : value
         })
-
     else:
-        print(selection)
+        # selection 확인용
+        # print(selection)
         a = list(selection.keys())
         a =  a[random.randrange(start_num, last_num)-1]
     return a
@@ -30,9 +30,24 @@ def setquiz() :
 a = setquiz()
 
 while(True):
+    # 보기 출력용
+    counter = int(selection_no**0.5)
+    index = 1
+    for s in selection:
+        if index%counter == 0:
+            print(s, end='\n')
+        else:
+            print(s, end='\t')
+        index += 1
+
+    # 문제 묻기
     print(selection.get(a))
+
     num = int(input('정답을 입력하세요 >>'))
-    print(a)
+
+    # 정답 확인용
+    # print(a)
+
     if int(a) == num:
         print('정답입니다.')
         break
